@@ -46,5 +46,8 @@ GROUP BY [User Type],[Weekday]
 SELECT [Month], COUNT([Bike ID]) AS num_of_bikes_rented
 FROM NYCitiBikes
 GROUP BY [Month]
-
---
+--seasonal trends
+SELECT season, COUNT(*) AS num_of_rent
+FROM NYCitiBikes
+GROUP BY season
+ORDER BY num_of_rent
